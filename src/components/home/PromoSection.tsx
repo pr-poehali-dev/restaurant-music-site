@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input';
 
 const PromoSection = () => {
   return (
-    <section className="py-16 bg-restaurant-dark text-white relative overflow-hidden">
+    <section className="py-16 bg-restaurant-accent text-white relative overflow-hidden">
       {/* Декоративный фоновый элемент */}
       <div 
         className="absolute inset-0 opacity-10 z-0"
@@ -17,10 +17,10 @@ const PromoSection = () => {
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-restaurant-secondary">
             Скидка 15% на первое посещение
           </h2>
-          <p className="text-lg mb-8 text-gray-300">
+          <p className="text-lg mb-8 text-white">
             Подпишитесь на нашу рассылку и получите промокод на скидку 15% 
             при первом посещении нашего ресторана-клуба. Мы также будем 
             информировать вас о новых блюдах, специальных предложениях и 
@@ -31,18 +31,18 @@ const PromoSection = () => {
             <Input 
               type="email" 
               placeholder="Введите ваш email" 
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400" 
+              className="bg-white/10 border-white/30 text-white placeholder:text-gray-300" 
               required
             />
             <Button 
               type="submit" 
-              className="bg-restaurant-secondary hover:bg-restaurant-primary text-restaurant-dark font-medium"
+              className="bg-restaurant-secondary hover:bg-restaurant-secondary/80 text-restaurant-dark font-medium"
             >
               Получить промокод
             </Button>
           </form>
           
-          <p className="mt-4 text-sm text-gray-400">
+          <p className="mt-4 text-sm text-gray-200">
             Мы никогда не будем отправлять спам. Вы можете отписаться в любое время.
           </p>
         </div>

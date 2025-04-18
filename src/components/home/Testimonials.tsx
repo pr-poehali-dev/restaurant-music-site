@@ -53,13 +53,13 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="section-padding bg-restaurant-light">
+    <section className="section-padding bg-restaurant-cream">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-restaurant-dark">
             Отзывы наших гостей
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-restaurant-gray max-w-3xl mx-auto">
             Мнения посетителей о нашей кухне, музыке и атмосфере
           </p>
         </div>
@@ -74,10 +74,10 @@ const Testimonials = () => {
           <CarouselContent>
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3 pl-4">
-                <Card className="h-full">
+                <Card className="h-full border-restaurant-copper/20">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden">
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-restaurant-primary/20">
                         <img 
                           src={testimonial.image} 
                           alt={testimonial.name} 
@@ -85,7 +85,7 @@ const Testimonials = () => {
                         />
                       </div>
                       <div>
-                        <h4 className="font-semibold">{testimonial.name}</h4>
+                        <h4 className="font-semibold text-restaurant-dark">{testimonial.name}</h4>
                         <div className="flex">
                           {Array.from({ length: 5 }).map((_, index) => (
                             <Star 
@@ -100,10 +100,10 @@ const Testimonials = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-700 mb-3 flex-grow">
+                    <p className="text-restaurant-gray mb-3 flex-grow">
                       "{testimonial.text}"
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-restaurant-gray/80">
                       {testimonial.date}
                     </p>
                   </CardContent>

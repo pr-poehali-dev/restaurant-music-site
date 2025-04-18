@@ -7,73 +7,73 @@ import {
 
 const ContactInfo = () => {
   return (
-    <section className="section-padding bg-restaurant-light">
+    <section className="section-padding bg-restaurant-cream">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-restaurant-dark">
             Как нас найти
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-restaurant-gray max-w-3xl mx-auto">
             Мы расположены в центре города, в нескольких минутах ходьбы 
             от станции метро и удобной парковкой для гостей
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-bold mb-4 text-restaurant-dark">
-              Контактная информация
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+            <div className="mb-4 p-3 bg-restaurant-primary/10 rounded-full">
+              <MapPin className="h-8 w-8 text-restaurant-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-restaurant-dark text-center">
+              Адрес
             </h3>
-            
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-restaurant-primary mt-1" />
-                <div>
-                  <p className="font-medium">Адрес:</p>
-                  <p className="text-gray-700">ул. Музыкальная, 42, Москва, 123456</p>
-                  <p className="text-gray-600 text-sm mt-1">Рядом со станцией метро "Центральная"</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-restaurant-primary mt-1" />
-                <div>
-                  <p className="font-medium">Телефон:</p>
-                  <a href="tel:+78001234567" className="text-gray-700 hover:text-restaurant-primary">
-                    8 (800) 123-45-67
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-restaurant-primary mt-1" />
-                <div>
-                  <p className="font-medium">Email:</p>
-                  <a href="mailto:info@ritmvkusa.ru" className="text-gray-700 hover:text-restaurant-primary">
-                    info@ritmvkusa.ru
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Clock className="h-5 w-5 text-restaurant-primary mt-1" />
-                <div>
-                  <p className="font-medium">Часы работы:</p>
-                  <p className="text-gray-700">Пн-Чт: 12:00 - 00:00</p>
-                  <p className="text-gray-700">Пт-Сб: 12:00 - 02:00</p>
-                  <p className="text-gray-700">Вс: 12:00 - 23:00</p>
-                </div>
-              </div>
+            <p className="text-center text-restaurant-gray">
+              ул. Музыкальная, 42<br />
+              Москва, 123456
+            </p>
+            <p className="text-center text-restaurant-gray text-sm mt-2">
+              Рядом со станцией метро "Центральная"
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+            <div className="mb-4 p-3 bg-restaurant-primary/10 rounded-full">
+              <Clock className="h-8 w-8 text-restaurant-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-restaurant-dark text-center">
+              Часы работы
+            </h3>
+            <div className="text-center text-restaurant-gray">
+              <p>Понедельник - Четверг: 12:00 - 00:00</p>
+              <p>Пятница - Суббота: 12:00 - 02:00</p>
+              <p>Воскресенье: 12:00 - 23:00</p>
             </div>
           </div>
           
-          <div className="lg:col-span-3 rounded-lg overflow-hidden shadow-md h-[400px]">
-            {/* Здесь будет интерактивная карта, пока используем заглушку */}
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-xl font-medium text-gray-600 mb-2">Интерактивная карта</p>
-                <p className="text-gray-500">(Здесь будет встроена карта с местоположением ресторана)</p>
-              </div>
+          <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+            <div className="mb-4 p-3 bg-restaurant-primary/10 rounded-full">
+              <Phone className="h-8 w-8 text-restaurant-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-restaurant-dark text-center">
+              Контакты
+            </h3>
+            <div className="text-center">
+              <a href="tel:+78001234567" className="text-restaurant-gray hover:text-restaurant-primary block mb-1">
+                8 (800) 123-45-67
+              </a>
+              <a href="mailto:info@ritmvkusa.ru" className="text-restaurant-gray hover:text-restaurant-primary block">
+                info@ritmvkusa.ru
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Интерактивная карта */}
+        <div className="mt-10 rounded-lg overflow-hidden shadow-md h-[400px]">
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-xl font-medium text-gray-600 mb-2">Интерактивная карта</p>
+              <p className="text-gray-500">(Здесь будет встроена карта с местоположением ресторана)</p>
             </div>
           </div>
         </div>

@@ -37,10 +37,10 @@ const EventsPreview = () => {
     <section className="section-padding bg-restaurant-dark text-white">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-restaurant-secondary">
             Ближайшие мероприятия
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
             Музыкальные вечера, концерты и тематические мероприятия, 
             которые сделают ваш визит в РитмВкуса незабываемым
           </p>
@@ -50,7 +50,7 @@ const EventsPreview = () => {
           {upcomingEvents.map((event) => (
             <div 
               key={event.id} 
-              className="bg-restaurant-dark border border-gray-700 rounded-lg overflow-hidden group"
+              className="bg-restaurant-gray/20 border border-restaurant-gray/30 rounded-lg overflow-hidden group"
             >
               <div className="aspect-video overflow-hidden relative">
                 <img 
@@ -58,7 +58,7 @@ const EventsPreview = () => {
                   alt={event.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
                   <div className="flex items-center gap-2 text-restaurant-secondary">
                     <Calendar className="h-4 w-4" />
                     <span className="text-sm">{event.date}</span>
@@ -73,13 +73,13 @@ const EventsPreview = () => {
                 <h3 className="text-xl font-bold mb-3 group-hover:text-restaurant-secondary transition-colors">
                   {event.title}
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-300 mb-4">
                   {event.description}
                 </p>
                 <div className="flex gap-3">
                   <Button asChild 
                     variant="outline" 
-                    className="flex-1 border-restaurant-secondary text-restaurant-secondary hover:bg-restaurant-secondary hover:text-white"
+                    className="flex-1 border-restaurant-secondary text-restaurant-secondary hover:bg-restaurant-secondary hover:text-restaurant-dark"
                   >
                     <Link to={event.link}>Подробнее</Link>
                   </Button>
@@ -95,7 +95,7 @@ const EventsPreview = () => {
         </div>
 
         <div className="text-center mt-10">
-          <Button asChild className="bg-restaurant-secondary hover:bg-restaurant-primary text-restaurant-dark hover:text-white px-8">
+          <Button asChild className="bg-restaurant-secondary hover:bg-restaurant-secondary/90 text-restaurant-dark font-medium px-8">
             <Link to="/events">Вся афиша</Link>
           </Button>
         </div>
