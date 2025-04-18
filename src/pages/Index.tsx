@@ -1,13 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Layout from '@/components/layout/Layout';
+import Hero from '@/components/home/Hero';
+import AboutPreview from '@/components/home/AboutPreview';
+import MenuPreview from '@/components/home/MenuPreview';
+import EventsPreview from '@/components/home/EventsPreview';
+import Testimonials from '@/components/home/Testimonials';
+import Reservation from '@/components/home/Reservation';
+import PromoSection from '@/components/home/PromoSection';
+import ContactInfo from '@/components/home/ContactInfo';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
-    </div>
+    <Layout>
+      <Hero />
+      <AboutPreview />
+      <MenuPreview />
+      <EventsPreview />
+      <Testimonials />
+      <Reservation />
+      <PromoSection />
+      <ContactInfo />
+    </Layout>
   );
 };
 
