@@ -28,8 +28,11 @@ const Hero = () => {
             <Button asChild className="bg-restaurant-primary hover:bg-restaurant-accent text-white text-lg px-8 py-6">
               <Link to="/reservation">Забронировать стол</Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white/20 text-lg px-8 py-6">
+            <Button asChild className="bg-restaurant-primary hover:bg-restaurant-accent text-white text-lg px-8 py-6">
               <Link to="/events">Афиша мероприятий</Link>
+            </Button>
+            <Button asChild className="bg-restaurant-primary hover:bg-restaurant-accent text-white text-lg px-8 py-6">
+              <Link to="/about">О нас</Link>
             </Button>
           </div>
         </div>
